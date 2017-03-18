@@ -1,0 +1,47 @@
+to do 
+
+LOAD DATA INFILE '/Applications/MAMP/tmp/21.csv'
+INTO TABLE employeeDB.employees
+FIELDS TERMINATED BY ',' ENCLOSED BY '"'
+LINES TERMINATED BY '\r\n'
+IGNORE 1 LINES;
+
+select count(*) from employees;
+
+02.Salary.sql
+display all employees
+that have a salary greater thAN 70000
+
+
+select * from employees 
+where salary > 70000;
+
+
+
+
+
+02.Salary.sql
+display all employees
+that have a salary greater than 
+100000 and age is greater than 30 display the data by salary in descending order 
+
+select * from employees 
+where salary >100000
+and 
+age >30 
+order by salary desc;
+
+
+ 02.Salary.sql
+display all employees
+that have a salary greater than 
+100000 and age is greater than 30
+and lastname begins with a "c" or an "s" display the data by salary in descending order 
+
+select * from employees 
+where salary >100000
+and 
+age >30 
+and (lastname like '%c' or lastname like '%s')
+order by salary desc;
+
